@@ -85,7 +85,7 @@ namespace RVO
             if (!reachedGoal())
             {
                 setPreferredVelocities();
-                Simulator.Instance.setTimeStep(Time.deltaTime);
+                Simulator.Instance.setTimeStep(0.25f);//Time.deltaTime);
                 Simulator.Instance.doStep();
 
                 for (int i = 0; i < Simulator.Instance.getNumAgents(); ++i)
